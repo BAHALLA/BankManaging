@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"    xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Banque</title>
+
+    <link rel="stylesheet" type="text/css" href="../../static/css/bootstrap.min.css"
+          th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" href="../../static/css/style.css"
+          th:href="@{/css/style.css}"/>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">BANK</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" th:href="@{/operations}">Operations</a>
+                    <a class="nav-item nav-link" th:href="@{/comptes}">Comptes</a>
+                    <a class="nav-item nav-link" th:href="@{/client}">Clients</a>
+                </div>
+                <div class="collapse navbar-collapse justify-content-end">
+                    <a class="nav-item nav-link" th:href="@{/logout}">Logout</a>
+
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <section layout:fragment="content">
+
+    </section>
+
+    <footer class="fixed-bottom">
+            <small>CopyRights 2019 By BAHALLA Taoufiq</small>
+    </footer>
+</body>
+</html>
