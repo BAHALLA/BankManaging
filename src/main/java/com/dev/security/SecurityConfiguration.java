@@ -24,5 +24,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
        http.formLogin();
         http.authorizeRequests().antMatchers("/operations","/consulterCompte").hasRole("USER");
         http.authorizeRequests().antMatchers("/saveOperation").hasRole("ADMIN");
+        http.exceptionHandling().accessDeniedPage("/403");
     }
 }

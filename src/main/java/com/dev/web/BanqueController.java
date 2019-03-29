@@ -23,6 +23,11 @@ public class BanqueController {
     public String home() {
         return "redirect:/operations";
     }
+
+    @RequestMapping(value ="/403", method = {RequestMethod.GET,RequestMethod.POST})
+    public String accessDenied() {
+        return "403";
+    }
     @RequestMapping(value = "/operations", method = RequestMethod.GET)
     public String index() {
         return "comptes";
