@@ -17,6 +17,8 @@ public abstract class Compte implements Serializable {
     @ManyToOne
     @JoinColumn(name = "code_Client")
     private Client client;
+
+
     @OneToMany(mappedBy = "compte",fetch = FetchType.LAZY)
     private Collection<Operations> operations;
 
